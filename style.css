@@ -1,0 +1,110 @@
+:root {
+    --bg1-clr: #BEBAAE;
+    --bg2-clr: white;
+    --primary-clr: #CA0202;
+    --text-clr: #000000;
+
+    --fs-20: 2rem;
+    --fs-30: 3rem;
+    --fs-18: 1.8rem;
+    --fs-64: 64rem;
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-900: 900;
+
+    /* spacing */
+
+    --section-padding: 4rem;
+
+    /* border radius */
+
+    --radius-circle: 50%;
+    --radius-60: 6rem;
+    --radius-50: 5rem;
+    --radius-30: 3rem;
+    --radius-20: 2rem;
+    --radius-15: 1.5rem;
+    --radius-5: .5rem;
+    --radius-2: .2rem;
+
+    /* transition */
+
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+}
+
+/*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg2-clr);
+    color: var(--text-clr);
+    font-size: var(--fs-18);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+img,
+span,
+button,
+ion-icon {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+ion-icon {
+    pointer-events: none;
+}
