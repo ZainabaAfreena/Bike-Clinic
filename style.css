@@ -108,3 +108,193 @@ button {
 ion-icon {
     pointer-events: none;
 }
+
+/*  */
+
+.ll{
+    font-size: var(--fs-20);
+}
+
+
+
+
+
+
+
+
+
+/* minhal */
+/* body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+} */
+.container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: 1s;
+}
+
+.slide_div {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    margin: 0px 30px 0px 30px;
+    display: inline-block;
+}
+
+.img {
+    height: 200px;
+    width: 200px; 
+    position: relative;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.text-content{
+  margin-top: 10px; 
+}
+
+.button {
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: 0.7s;
+    
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#slider-1:target ~ .imgContainer #img1,
+#slider-1:target ~ .imgContainer #button1 {
+    width: auto;
+    height: 400px; 
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+
+#slider-2:target ~ .imgContainer #img2,
+#slider-2:target ~ .imgContainer #button2 {
+    width:auto;
+    height: 400px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider-3:target ~ .imgContainer #img3,
+#slider-3:target ~ .imgContainer #button3 {
+    width: auto;
+    height: 400px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider-4:target ~ .imgContainer #img4,
+#slider-4:target ~ .imgContainer #button4 {
+    width:auto ;
+    height: 400px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider-5:target ~ .imgContainer #img5,
+#slider-5:target ~ .imgContainer #button5 {
+    width: auto;
+    height: 400px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider-6:target ~ .imgContainer #img6,
+#slider-6:target ~ .imgContainer #button6 {
+    width: auto;
+    height: 400px; 
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider-7:target ~ .imgContainer #img7,
+#slider-7:target ~ .imgContainer #button7 {
+    width:auto ;
+    height: 400px; 
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider-8:target ~ .imgContainer #img8,
+#slider-8:target ~ .imgContainer #button8 {
+    width:auto ;
+    height: 400px; 
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider-9:target ~ .imgContainer #img9,
+#slider-9:target ~ .imgContainer #button9 {
+    width:auto ;
+    height: 400px; 
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider-10:target ~ .imgContainer #img10,
+#slider-10:target ~ .imgContainer #button10 {
+    width: auto;
+    height: 400px; 
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+
+ #slider-1:target ~ .imgContainer {  
+    left: 60%;
+}
+
+#slider-2:target ~ .imgContainer {
+    left: 40%;
+}
+
+#slider-3:target ~ .imgContainer {
+    left: 20%;
+}
+
+#slider-4:target ~ .imgContainer {
+    left: 0%;
+}
+
+#slider-5:target ~ .imgContainer {
+    left: -20%;
+}
+
+#slider-6:target ~ .imgContainer {
+    left: 0%;
+    right: auto;
+}
+
+#slider-7:target ~ .imgContainer {
+    left: -60%;
+}
+
+#slider-8:target ~ .imgContainer {
+    left: -40%; 
+}
+
+#slider-9:target ~ .imgContainer {
+    left: -20%; 
+}
