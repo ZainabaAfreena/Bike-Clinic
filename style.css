@@ -7,7 +7,7 @@
     --fs-20: 2rem;
     --fs-30: 3rem;
     --fs-18: 1.8rem;
-    --fs-64: 64rem;
+    --fs-64: 6.4rem;
 
     --fw-400: 400;
     --fw-500: 500;
@@ -107,4 +107,368 @@ button {
 
 ion-icon {
     pointer-events: none;
+}
+
+/* Header Akmal*/
+
+.body-home{
+  height: 200vh;
+  background-color: var(--bg1-clr);
+  z-index: -2;
+    
+}
+
+.strip{
+  background-color: var(--primary-clr);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15vw;
+  height: 200vh;  
+}
+
+ header{
+  display: flex;
+  text-wrap: nowrap;
+  justify-self: center;
+  padding: 2rem;
+}
+
+ header div{
+  margin: auto;
+  font-size: var(--fs-18);
+  z-index: 1;
+}
+
+
+.option-logo{
+    z-index: 1;
+    color: var(--bg2-clr);
+} 
+
+
+
+.left-menu, .right-menu{
+  width: 100%;
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+    
+}
+
+.left-container{
+    width: 40vw;
+    margin-left: 4%;
+}
+
+.description-left-top, .description-left-container{
+    margin: 5rem;
+}
+
+.heading{
+    font-size: var(--fs-64);
+    font-weight: var(--fw-900);
+}
+
+.know-more-right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.know-more-left button, .know-more-right button {
+    border: 2px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--radius-50);
+    max-width: fit-content;
+}
+
+/*-----carousel----*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+.slider-center{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 1.7;
+	color: #343434;
+}
+a {
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
+}
+.section{
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.section-center-slide{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Replace with container element height if needed */
+  overflow: hidden;
+  padding: 1rem;
+  @media (min-width: 640px) {
+    padding: 0;
+  }
+}
+
+.container-center{
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Optional: Can be customized based on your needs */
+  height: 100vh;
+}
+
+.container-slider{
+  align-self: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  
+  @media (min-width: 1200px) {
+    flex: 0 0 66.666667%; /* Take up 66.66% of the available space on extra large screens and up */
+    max-width: 66.666667%;
+  }
+
+  @media (min-width: 992px) {
+    flex: 0 0 83.333333%; /* Take up 83.33% of the available space on large screens and up */
+    max-width: 83.333333%;
+  }
+}
+
+.sliders{
+  text-align: center;
+  padding-top: 15vh;
+  width: 100%;
+  height: 100%;
+}
+
+.full-height{
+  min-height: 100vh;
+}
+.over-hide{
+  overflow: hidden;
+}
+.padding-tb{
+  padding: 100px 0;
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align: center;
+  margin-right: 6px;
+  margin-left: 6px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #bdc3c7;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-image: url('https://assets.codepen.io/1462889/sl1.jpg');
+  animation: border-transform 6s linear infinite alternate forwards;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.checkbox.scnd + label{
+  background-image: url('https://assets.codepen.io/1462889/sl2.jpg');
+}
+.checkbox.thrd + label{
+  background-image: url('https://assets.codepen.io/1462889/sl3.jpg');
+}
+.checkbox.foth + label{
+  background-image: url('https://assets.codepen.io/1462889/sl4.jpg');
+}
+
+.checkbox:checked + label{
+  box-shadow: 0 8px 25px 0 rgba(16,39,112,.3);
+  transform: scale(1.3);
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    animation-play-state: running;
+}
+@keyframes border-transform{
+  0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
+  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
+  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
+  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
+  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
+  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
+  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+}
+
+.slider-height-padding {
+  padding-top: 440px;
+}
+
+.image-lists {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(25%);
+  width: 100%;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sliders ul li {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(50%,25%);
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  list-style: none;
+  height: 325px;
+  border: 5px solid rgb(189, 195, 199);
+  background-size: cover;
+  background-position: center center;
+  background-image: url(https://assets.codepen.io/1462889/sl1.jpg);
+  font-family: Poppins, sans-serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 2.7;
+  color: rgb(52, 52, 52);
+  opacity: 0;
+  box-shadow: rgba(16, 39, 112, 0.1) 0px 8px 25px 0px;
+  transition: all 0.5s ease 0s;
+}
+.sliders ul li span {
+  mix-blend-mode: difference;
+}
+.sliders ul li:nth-child(2) {
+  background-image: url('https://assets.codepen.io/1462889/sl2.jpg');
+}
+.sliders ul li:nth-child(3) {
+  background-image: url('https://assets.codepen.io/1462889/sl3.jpg');
+}
+.sliders ul li:nth-child(4) {
+  background-image: url('https://assets.codepen.io/1462889/sl4.jpg');
+}
+
+
+.checkbox.frst:checked ~ ul li:nth-child(1) {
+  opacity: 1;
+  pointer-events: auto;
+  border-radius: 16px;
+}
+.checkbox.scnd:checked ~ ul li:nth-child(2) {
+  opacity: 1;
+  pointer-events: auto;
+  border-radius: 16px;
+}
+.checkbox.thrd:checked ~ ul li:nth-child(3) {
+  opacity: 1;
+  pointer-events: auto;
+  border-radius: 16px;
+}
+.checkbox.foth:checked ~ ul li:nth-child(4) {
+  opacity: 1;
+  pointer-events: auto;
+  border-radius: 16px;
+}
+
+.logo {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	display: block;
+	z-index: 100;
+	transition: all 250ms linear;
+}
+.logo img {
+	height: 26px;
+	width: auto;
+	display: block;
+}
+
+
+
+@media (max-width: 767px) {
+  .slider-height-padding {
+    padding-top: 340px;
+  }
+ 
+  .slider ul li {
+    height: 300px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 575px) {
+  .slider-height-padding {
+    padding-top: 240px;
+  }
+  .sliders ul li {
+    height: 200px;
+  }
+}
+
+.page-descriptions{
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-container{
+  width: 40vw;
+  margin-right: 4%;
+  text-align: right;
+}
+
+.description-right-container{
+  margin: 5rem;
+  text-align: end;
+}
+
+.heading-page-two{
+  font-size: var(--fs-30);
+  font-weight: var(--fw-600);
+}
+
+.heading-page-two::after {
+  margin-top: 3rem;;
+  content: "";
+  display: block;
+  width: 75%; /* Adjust width as needed */
+  height: 2px;
+  background-color: var(--primary-clr); /* Set line color */
+  
+}
+
+.heading-page-two span{
+  font-weight: normal;
+}
+
+.right-align::after{
+  float: right;
+}
+
+.left-align::after{
+  float: left;
+}
+
+.separation{
+  margin-top: 2rem;
 }
