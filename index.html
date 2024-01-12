@@ -8,33 +8,88 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    
 </head>
 
 <body>
+    <!-- preloader -->
+
+   <div class="loader-wrapper">
+         <div class="loader"> </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div> 
+      </div>
+    <!-- progress bar -->
+    <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+    </div>
+    <!-- progress circle -->
+    <div class="progress-circle-container">
+        <svg class="progress-circle" viewBox="0 0 100 100">
+            <circle class="progress-background" cx="50" cy="50" r="45"></circle>
+            <circle class="progress-circle-bar" cx="50" cy="50" r="45"></circle>
+        </svg>
+        <div class="scroll-to-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
+        </div>
+    </div>
+
     <div class="full-page">
+
         <!-- akmal header and home page -->
+        <div class="menu">
+            <ion-icon name="reorder-two-outline"></ion-icon>
+            <!-- <i class="fa-solid fa-bars"></i> -->
+            <div class="menu-items">
+                <div class="menu-item"><a href="#1">Email</a></div>
+                <div class="menu-item"><a href="#2">Facebook</a></div>
+                <div class="menu-item"><a href="#3">Services</a></div>
+            </div>
+        </div>
         <div class="body-home">
-            <div class="strip"></div>
-            <header class="option-list ">
+            <div class="strip-parent">
+                <div class="strip" ></div>
+            </div>
+        
+            <header class="option-list " data-header data-reveal="top">
                 <div class="left-menu">
                     <div><a href="#">HOME</a></div>
                     <div><a href="#">KNOW US</a></div>
                 </div>
-                <div class="option-logo">
-                    <h2>BIKE CLINIC</h2>
-                </div>
+                <!-- <div class="option-logo"> -->
+                <!-- <h2>BIKE CLINIC</h2> -->
+                <img src="images/bike clinic logo-02.png" id="bike-logo" alt="bike clinic logo">
+                <!-- </div> -->
                 <div class="right-menu">
                     <div><a href="#">SERVICES</a> </div>
                     <div><a href="#">CONTACT US</a> </div>
                 </div>
             </header>
-            <div class="slider-center">
-                <div class="section-center-slide">
+            <section class="padding-t20"></section>
+            <div class="page-descriptions">
+                <div class="left-container" data-reveal="left">
+                    <div class="description-left-top">
+                        <div class="collection">Check Out <br>2015 Fall Collection</div>
+                    </div>
+
+                    <div class="description-left-container">
+                        <div>INTRODUCING THE ALL NEW</div>
+                        <div class="heading">CUB-07 DECOR</div>
+                        <div class="know-more-left"><button class="button">Button</button></div>
+                    </div>
+                </div>
+
+                <div class="section full-height over-hide px-4 px-sm-0" data-reveal="bottom">
                     <div class="container">
-                        <div class="container-center">
-                            <div class="container-slider">
-                                <div class="sliders">
+                        <div class="row full-height justify-content-center">
+                            <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
+                                <div class="section mx-auto text-center slider-height-padding">
                                     <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked />
                                     <label for="slide-1"></label>
                                     <input class="checkbox scnd" type="radio" name="slider" id="slider-2" />
@@ -43,8 +98,8 @@
                                     <label for="slider-3"></label>
                                     <input class="checkbox foth" type="radio" name="slider" id="slider-4" />
                                     <label for="slider-4"></label>
-                                    <ul class="image-lists">
-                                        <li class="image-list">
+                                    <ul>
+                                        <li>
                                             <span>MALE GOOFY FACE</span>
                                         </li>
                                         <li>
@@ -63,36 +118,22 @@
                     </div>
                 </div>
 
-            </div>
-
-            <div class="page-descriptions">
-                <div class="left-container">
-                    <div class="description-left-top">
-                        <div class="collection">Check Out <br>2015 Fall Collection</div>
-                    </div>
-
-                    <div class="description-left-container">
-                        <div>INTRODUCING THE ALL NEW</div>
-                        <div class="heading">CUB-07 DECOR</div>
-                        <div class="know-more-left"><button>know more</button></div>
-                    </div>
-                </div>
-
-                <div class="right-container">
+                <div class="right-container" data-reveal="right">
                     <div class="description-left-top">
                         <div class="collection">Check Out <br>2015 Fall Collection</div>
                     </div>
                     <div class="description-right-container">
                         <div>INTRODUCING THE ALL NEW</div>
                         <div class="heading">CUB-07 DECOR</div>
-                        <div class="know-more-right"><button>know more</button></div>
+                        <div class="know-more-right"><button class="button">Button</button></div>
                     </div>
                 </div>
             </div>
             <div class="page-descriptions separation">
-                <div class="left-container">
+                <div class="left-container" data-reveal="right">
                     <div class="description-left-top">
-                        <div class="left-align heading-page-two">Welcome to <br><span>Bike Clinic Accessories</span></div>
+                        <div class="left-align heading-page-two">Welcome to <br><span>Bike Clinic Accessories</span>
+                        </div>
                     </div>
                     <div class="description-left-container">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, quisquam commodi impedit
@@ -103,9 +144,9 @@
                     </div>
                 </div>
 
-                <div class="right-container">
+                <div class="right-container" data-reveal="left">
                     <div class="description-left-top">
-                        <div class="right-align heading-page-two" >Share<br><span>Your Feedback</span></div>
+                        <div class="right-align heading-page-two">Share<br><span>Your Feedback</span></div>
                     </div>
                     <div class="description-right-container">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis fuga exercitationem
@@ -120,6 +161,7 @@
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 

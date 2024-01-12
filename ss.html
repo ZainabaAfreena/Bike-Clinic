@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500">
+</head>
+<style>
+/* Body styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  color: white;
+  /* overflow: hidden; */
+}
+
+/* Animation styles */
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Menu styles */
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: white;
+  border-radius: 0 0 40% 0;
+  transition: all 0.5s ease;
+  z-index: 998;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.menu i {
+  color: black;
+  font-size: 28px;
+  transition: all 0.5s ease;
+  z-index: 999;
+  position: absolute;
+  cursor: pointer;
+}
+
+.menu-items {
+  color: black;
+  font-size: 48px;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-300px);
+}
+
+.menu-item {
+  transition: all 0.25s ease-in-out;
+}
+
+.menu-item:hover {
+  scale: 1.05;
+}
+
+.menu-item a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Function styles */
+
+.expand {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+}
+
+.hidden {
+  visibility: hidden;
+  animation: fadeOut 0.5s ease;
+}
+</style>   
+
+<body>
+<div class="menu">
+    <i class="fa-solid fa-bars"></i>
+    <div class="menu-items">
+        <div class="menu-item"><a href="#1">Choice 1</a></div>
+        <div class="menu-item"><a href="#2">Choice 2</a></div>
+        <div class="menu-item"><a href="#3">Choice 3</a></div>
+    </div>
+</div>
+
+<script>
+  const menu = document.querySelector('.menu');
+const icon = document.querySelector('.menu i');
+const items = document.querySelector('.menu-items');
+const item = document.querySelectorAll('.menu-item');
+
+menu.addEventListener('click', () => {
+    menu.classList.toggle('expand');
+    icon.classList.toggle('hidden');
+
+    if (menu.classList.contains('expand')) {
+        setTimeout(() => {
+            items.style.opacity = 1;
+            items.style.transition = 'all 0.4s ease-in-out';
+            items.style.transform = 'translateY(0)';
+        }, 500);
+    } else {
+        items.style.opacity = 0;
+        items.style.transition = 'all 0.25s ease-in-out';
+        items.style.transform = 'translateY(-600px)';
+    }
+});
+
+
+function collapseMenu() {
+    menu.classList.remove('expand');
+    icon.classList.remove('hidden');
+    items.style.opacity = 0;
+    items.style.transform = 'translateY(-20px)';
+}
+
+item.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        if (menu.classList.contains('expand') && !menu.contains(e.target)) {
+            collapseMenu();
+        }
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (menu.classList.contains('expand') && !menu.contains(e.target)) {
+        collapseMenu();
+    }
+});
+
+</script>
+</body>
+</html>

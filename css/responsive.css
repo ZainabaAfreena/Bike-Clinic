@@ -1,0 +1,135 @@
+@media (max-width: 911px) {
+    .page-descriptions {
+        flex-wrap: wrap;
+    }
+
+    .option-list div {
+        display: none;
+
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .section {
+        width: 90%;
+        order: 1;
+    }
+
+    .left-container {
+        display: none;
+        order: 2;
+    }
+
+    .right-container {
+        /* display: none; */
+        order: 3;
+    }
+
+    .description-right-container {
+        text-align: center;
+    }
+
+    .description-left-top,
+    .description-left-container {
+        text-align: center;
+    }
+
+    .know-more-right {
+        justify-content: center;
+    }
+
+    .description-right-container p {
+        padding-left: 0;
+        padding-inline: 2rem;
+    }
+
+    .right-align::after {
+        float: unset;
+    }
+
+    .heading-page-two::after {
+        margin-inline: auto;
+    }
+
+    .separation {
+        margin-top: 0px;
+    }
+
+    .strip {
+        width: 25vw;
+        /* max-height: 166vh; */
+    }
+
+    #bike-logo {
+        width: 20%;
+    }
+
+    [data-reveal].revealed {
+        margin-inline: auto;
+        overflow: hidden
+    }
+
+    /* menu */
+
+    .menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3rem;
+        background-color: white;
+        border-radius: 40% 40% 0 0;
+        transition: all 0.5s ease;
+        z-index: 99999;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .menu ion-icon {
+        color: black;
+        font-size: 28px;
+        transition: all 0.5s ease;
+        z-index: 999;
+        position: absolute;
+        cursor: pointer;
+      }
+      
+      .menu-items {
+        color: black;
+        font-size: 28px;
+        z-index: 999;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      .menu-item {
+        transition: all 0.25s ease-in-out;
+      }
+      
+      .menu-item:hover {
+        scale: 1.05;
+      }
+      
+      .menu-item a {
+        color: black;
+        text-decoration: none;
+      }
+      
+      /* Function styles */
+      
+      .expand {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+      }
+      
+      .hidden {
+        visibility: hidden;
+        animation: fadeOut 0.5s ease;
+      }
+}
